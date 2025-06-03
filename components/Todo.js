@@ -14,7 +14,7 @@ class Todo {
   }
 
   _generateCheckboxEl() {
-    const todoCheckboxEl = this._todoElement.querySelector(".todo__checkbox");
+    const todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
     const todoLabel = this._todoElement.querySelector(".todo__label");
     todoCheckboxEl.checked = this._data.completed;
     todoCheckboxEl.id = `todo-${this._data.id}`;
@@ -25,7 +25,7 @@ class Todo {
     this._todoElement = this._todoTemplate.content.cloneNode(true).children[0];
 
     this._todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
-    this._todoCheckboxEl = this._todoElement.querySelector(".todo__checkbox");
+    this._todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
 
     const todoNameEl = this._todoElement.querySelector(".todo__name");
     const todoDate = this._todoElement.querySelector(".todo__date");

@@ -2,7 +2,7 @@ import {
   showInputError,
   hideInputError,
   toggleButtonState,
-} from "./validate.js";
+} from "../scripts/validate.js";
 
 class FormValidator {
   constructor(settings, formEl) {
