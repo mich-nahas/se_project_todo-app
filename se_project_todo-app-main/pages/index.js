@@ -19,7 +19,7 @@ const closeModal = (modal) => {
 };
 
 const generateTodo = (data) => {
-  const todo = new Todo(data, "#todo-item-template");
+  const todo = new Todo(data, "#todo-template");
   const todoElement = todo.getView();
   return todoElement;
 };

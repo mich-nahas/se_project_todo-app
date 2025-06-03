@@ -1,5 +1,5 @@
 class Todo {
-  constructor(data) {
+  constructor(data, templateSelector) {
     this._data = data;
     this._todoTemplate = document.querySelector(templateSelector);
   }

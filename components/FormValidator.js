@@ -38,9 +38,7 @@ class FormValidator {
     const inputList = Array.from(
       this._formEl.querySelectorAll(this._inputSelector)
     );
-    const buttonElement = this._formEl.querySelector(
-      this._submitButtonSelector
-    );
+    const buttonElement = this._formEl.querySelector(this._buttonSelector);
 
     toggleButtonState(inputList, buttonElement, {
       inactiveButtonClass: this._inactiveButtonClass,

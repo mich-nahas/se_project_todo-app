@@ -1,4 +1,4 @@
-import { validationConfig } from "../../utils/constants";
+import { validationConfig } from "../../utils/constants.js";
 
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
   const errorElementId = `#${inputElement.id}-error`;
@@ -71,4 +71,4 @@ const enableValidation = (settings) => {
   });
 };
 
-enableValidation(validationConfig);
+export { showInputError, hideInputError, toggleButtonState };
