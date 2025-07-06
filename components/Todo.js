@@ -14,10 +14,9 @@ class Todo {
   }
 
   _generateCheckboxEl() {
-    const todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
     const todoLabel = this._todoElement.querySelector(".todo__label");
-    todoCheckboxEl.checked = this._data.completed;
-    todoCheckboxEl.id = `todo-${this._data.id}`;
+    this._todoCheckboxEl.checked = this._data.completed;
+    this._todoCheckboxEl.id = `todo-${this._data.id}`;
     todoLabel.setAttribute("for", `todo-${this._data.id}`);
   }
 
