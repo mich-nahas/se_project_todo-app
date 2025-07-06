@@ -20,8 +20,11 @@ const closeModal = (modal) => {
 
 const generateTodo = (data) => {
   const todo = new Todo(data, "#todo-template");
-  const todoElement = todo.getView();
-  return todoElement;
+  return todo.getView();
+};
+const renderTodo = (item) => {
+  const todoElement = generateTodo(item);
+  todoList.append(todoElement);
 };
 
 addTodoButton.addEventListener("click", () => {
@@ -42,8 +45,8 @@ addTodoForm.addEventListener("submit", (evt) => {
 
   const id = uuidv4();
   const values = { name, date };
-  const todo = generateTodo(values);
-  todoList.append(todo);
+
+  renderTodo(values);
   closeModal(addTodoPopup);
 });
 
