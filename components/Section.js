@@ -12,13 +12,6 @@ class Section {
   addItem(element) {
     this._container.append(element);
   }
-
-  removeItem(id) {
-    const itemEl = this._container.querySelector(`[data-id="${id}"]`);
-    if (itemEl) {
-      itemEl.remove();
-    }
-  }
 }
 
 export default Section;

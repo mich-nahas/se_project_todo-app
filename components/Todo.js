@@ -5,8 +5,6 @@ class Todo {
     this._handleCheck = handleCheck;
     this._handleDelete = handleDelete;
     this._completed = data.completed;
-    this._todoElement = null;
-    this._todoCheckboxEl = null;
   }
 
   _setEventListeners() {
@@ -17,6 +15,7 @@ class Todo {
     });
     this._todoDeleteBtn.addEventListener("click", () => {
       this._handleDelete(this._data);
+      this._todoElement.remove();
     });
   }
 
@@ -30,7 +29,7 @@ class Todo {
   getView() {
     this._todoElement = this._todoTemplate.content.cloneNode(true).children[0];
 
-    this._todoElement.dataset.id = this._data.id; // ✅ Assign it to the correct element
+    this._todoElement.dataset.id = this._data.id;
 
     this._todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
     this._todoCheckboxEl = this._todoElement.querySelector(".todo__completed");
